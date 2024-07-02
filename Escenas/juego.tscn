@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvx7wjnuaalya"]
+
+[ext_resource type="PackedScene" uid="uid://dhggb26i3ogqv" path="res://Escenas/player.tscn" id="1_4bbd4"]
+[ext_resource type="Texture2D" uid="uid://dannf3lotrhvl" path="res://AssetsJuego/bosque.png" id="1_fqs5w"]
+[ext_resource type="Texture2D" uid="uid://ykynx4n1oi2o" path="res://Escenas/forest_of_pixels_by_bunnsp_ddxkac6-pre.jpg" id="2_eexu8"]
+[ext_resource type="PackedScene" uid="uid://ca6w4ubslblua" path="res://Escenas/spawner.tscn" id="3_0gijh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gii4x"]
+size = Vector2(336, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akl0d"]
+size = Vector2(20, 192)
+
+[node name="Game" type="Node"]
+
+[node name="Bosque" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(162, 81)
+scale = Vector2(0.338281, 0.31388)
+texture = ExtResource("1_fqs5w")
+
+[node name="ForestOfPixelsByBunnspDdxkac6-pre" type="Sprite2D" parent="."]
+position = Vector2(163, 89)
+scale = Vector2(0.302611, 0.323576)
+texture = ExtResource("2_eexu8")
+
+[node name="Player" parent="." instance=ExtResource("1_4bbd4")]
+position = Vector2(162, 145)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(162, 167.5)
+shape = SubResource("RectangleShape2D_gii4x")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(159, -1)
+shape = SubResource("RectangleShape2D_gii4x")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-11, 87)
+shape = SubResource("RectangleShape2D_akl0d")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(335, 83)
+shape = SubResource("RectangleShape2D_akl0d")
+
+[node name="Spawner" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(5, 7)
+
+[node name="Spawner2" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(42, 7)
+
+[node name="Spawner3" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(83, 7)
+
+[node name="Spawner4" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(120, 7)
+
+[node name="Spawner5" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(162, 7)
+
+[node name="Spawner6" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(199, 7)
+
+[node name="Spawner7" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(235, 7)
+
+[node name="Spawner8" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(272, 7)
+
+[node name="Spawner9" parent="." instance=ExtResource("3_0gijh")]
+position = Vector2(311, 7)
